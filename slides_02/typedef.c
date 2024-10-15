@@ -31,7 +31,7 @@ int main(void) {
     printf("\nMatricula   : %d\n", aluno1.matricula);
     printf("Media do aluno1: %.1f\n", media);
 
-    printf("Informe o numero de matricula: ");
+    printf("\nInforme o numero de matricula: ");
     scanf("%d", &aluno2.matricula);
     aluno2.prova1 = aluno1.prova1;
     aluno2.prova2 = aluno1.prova2;
