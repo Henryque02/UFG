@@ -20,16 +20,16 @@ int main(void) {
     nota media = 0;
   
     printf("Informe o numero de matricula: ");
-    scanf("%d", ...);
+    scanf("%d", &aluno.matricula);
     printf("Informe a nota da primeira prova: ");
-    scanf("%f", ...);
+    scanf("%f", &aluno.prova1);
     printf("Informe a nota da segunda prova: ");
-    scanf("%f", ...);
+    scanf("%f", &aluno.prova2);
 
-    media = (...  + ...) / 2;
+    media = ( aluno.prova1 + aluno.prova2) / 2;
 
-    printf("\nMatricula.....: %d\n", );
-    printf("Media do aluno: %.1f\n", );
+    printf("\nMatricula   : %d\n", aluno.matricula);
+    printf("Media do aluno: %.1f\n", media);
     getchar();
 
     return(0);
