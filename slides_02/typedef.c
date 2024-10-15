@@ -16,20 +16,28 @@ struct tAluno {
 typedef struct tAluno tAluno;
 
 int main(void) {
-    tAluno aluno;
+    tAluno aluno1, aluno2;
     nota media = 0;
   
     printf("Informe o numero de matricula: ");
-    scanf("%d", &aluno.matricula);
+    scanf("%d", &aluno1.matricula);
     printf("Informe a nota da primeira prova: ");
-    scanf("%f", &aluno.prova1);
+    scanf("%f", &aluno1.prova1);
     printf("Informe a nota da segunda prova: ");
-    scanf("%f", &aluno.prova2);
+    scanf("%f", &aluno1.prova2);
 
-    media = ( aluno.prova1 + aluno.prova2) / 2;
+    media = ( aluno1.prova1 + aluno1.prova2) / 2;
 
-    printf("\nMatricula   : %d\n", aluno.matricula);
-    printf("Media do aluno: %.1f\n", media);
+    printf("\nMatricula   : %d\n", aluno1.matricula);
+    printf("Media do aluno1: %.1f\n", media);
+
+    printf("Informe o numero de matricula: ");
+    scanf("%d", &aluno2.matricula);
+    aluno2.prova1 = aluno1.prova1;
+    aluno2.prova2 = aluno1.prova2;
+    printf("\nMatricula   : %d\n", aluno2.matricula);
+    printf("Media do aluno1: %.1f\n", media);
+
     getchar();
 
     return(0);
