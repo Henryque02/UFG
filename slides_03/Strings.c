@@ -7,6 +7,10 @@ Responda: Descubra o que fazem as seguintes funções: strlen, strcpy, strcat, s
 
 int main(){
     
+    char Nome[50];
+    printf("Digite seu nome e sobrenome: ");
+    scanf("%50[^\n]", Nome);
+    printf("%s", Nome);
     
     return 0;
 }

@@ -4,7 +4,7 @@
 
 int main(){
 
-    int x, y;
+    int x = 20, y;
     
     if (&x > &y)
     {

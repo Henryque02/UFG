@@ -1,11 +1,7 @@
 /*Escreva um programa que declare um inteiro, um real e um char, e ponteiros para inteiro, real e char.
-
 Associe as variáveis aos ponteiros (use &).
-
 Modifique os valores de cada variável usando os ponteiros.
-
-Imprima os valores das variáveis antes e após a modificação.
-*/
+Imprima os valores das variáveis antes e após a modificação.*/
 
 #include<stdio.h>
 
@@ -24,7 +20,7 @@ int main(){
 
     printf("O inteiro digitado foi %d, o real digitado foi %f e a letra digitada foi %c", inteiro, real, letra);
     
-    pin
+    pint = &
     
     
     
