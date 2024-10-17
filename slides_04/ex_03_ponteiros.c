@@ -7,24 +7,17 @@ Imprima os valores das variáveis antes e após a modificação.*/
 
 int main(){
 
-    int inteiro, *pint;
-    float real, *preal;
-    char letra, *pletra;
-
-    printf("Digite um inteiro, um real e uma letra:\n");
-    scanf("%d%f %c", &inteiro, &real, &letra);
-
-    pint = &inteiro;
-    preal = &real;
-    pletra = &letra;
-
-    printf("O inteiro digitado foi %d, o real digitado foi %f e a letra digitada foi %c", inteiro, real, letra);
-    
-    pint = &
-    
-    
-    
-    printf("Depois de trocar o inteiro vale  um real e uma letra:")
+    int inteiro = 10, *ptr_inteiro;
+    float real = 3.5, *ptr_real;
+    char caracter = 'h', *ptr_caracter;
+    ptr_inteiro = &inteiro;
+    ptr_real = &real;
+    ptr_caracter = &caracter;
+    printf("O valor de intero e %d\nO valor de real e %.2f\nO valor de caracter e %c\n", inteiro, real, caracter);
+    *ptr_inteiro = 15;
+    *ptr_real = 5.2;
+    *ptr_caracter = 'g';
+    printf("Depois da troca o inteiro vale: %d\nO real vale: %f\nO caracter vale: %c", inteiro, real, caracter);
 
     return 0;
 }

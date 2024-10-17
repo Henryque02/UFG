@@ -4,14 +4,14 @@
 
 int main(){
 
-    int x = 20, y;
+    int x, y;
     
     if (&x > &y)
     {
-        printf("%p", &x);
+        printf(" O endereco de x e %p e e maior que o endereco de y que e %p", &x, &y);
     }
     else
-        printf("%p", &y);
+        printf(" O endereco de y e %p e maior que o endereco de x que e %p", &y, &x);
     
     return 0;
 }
