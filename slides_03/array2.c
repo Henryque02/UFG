@@ -35,41 +35,57 @@ int main(){
 
 /*
 #include <stdio.h>
-#define limit 10
+#include <stdlib.h>
 
-int main(){
-    int numeros[limit], aux; 
-    int maior = 0, menor = 0;
+int achaMaior(int* vetor, int tamanho) {
+  int maior = vetor[0];
 
-    printf("Insira um numero: ");
-    for(int i=0; i<limit; i++){
-        scanf("%d", &numeros[i]);   
+  for (int i=1;i<tamanho;i++) {
+    if (vetor[i] > maior) {
+      maior = vetor[i];
     }
+  }
 
-    // Ordenar para saber qual sera o maior
-    for(int i=0; i<limit; i++){
-         for (int j=0; j<limit-i-1; j++){
-            if(numeros[j] > numeros[j+1]){
-            aux = numeros[j];
-            numeros[j] = numeros[j+1];
-            numeros[j+1] = aux;
-            }
-        }
+  return maior;
+}
+
+int achaMenor(int* vetor, int tamanho) {
+  int menor = vetor[0];
+
+  for (int i=1;i<tamanho;i++) {
+    if (vetor[i] < menor) {
+      menor = vetor[i];
     }
-    maior = numeros[9];
-    menor = numeros[0];
-    printf("\n");
-    
-    // Printing 
-    
-    printf("Elementos do vetor: ");
-    for(int i=0; i<limit; i++){
-        printf("[%d] ", numeros[i]);
-    }
-    printf("\n");
-    printf("Maior = %d\n", maior);
-    printf("Menor = %d\n", menor);
+  }
 
+  return menor;
+}
 
-    return 0;
-} */
+int main(int argc, char* argv[]) {
+  int vetor[100];
+  int N;
+ 
+  /* Entendo argc e argv
+  printf("argc   : %d\n", argc);
+  printf("argv[0]: %s\n", argv[0]);
+  printf("argv[1]: %s\n", argv[1]);
+  
+  
+  if(argc == 2) {
+    N = atoi(argv[1]); // char* em inteiros
+    printf("N: %d\n", N);
+  }
+  
+  for (int i = 0; i<N;i++) {
+    scanf("%d", &vetor[i]);
+  }
+
+  for (int i=0;i<N;i++) {
+    printf("%d\n", vetor[i]);  
+  }
+
+  printf("Maior: %d\n", achaMaior(vetor, N));
+  printf("Menor: %d\n", achaMenor(vetor, N));
+  
+  return 0;
+}
