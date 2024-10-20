@@ -6,6 +6,8 @@ Imprima os elementos da matriz e, em seguida, o seu maior elemento
 
 #include <stdio.h>
 
+int M,N;
+
 int main(int argc, char *argv[]) {
     printf("Número de argumentos: %d\n", argc);
 

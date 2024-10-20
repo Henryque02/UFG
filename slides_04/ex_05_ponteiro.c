@@ -5,22 +5,23 @@ A função deverá armazenar o dobro de A na própria variável A e o dobro de B
 
 #include<stdio.h>
 
-int main(){
+int SomadoDobro(int *A, int *B) {
+    *A = 2 * (*A);  
+    *B = 2 * (*B);
+    return *A + *B; 
+}
 
-    int A,B, *ptrA, *ptrB, op;
-    printf("Digite um valor inteiro para A: ");
+int main() {
+    int A, B;
+
+    printf("Digite um valor inteiro: ");
     scanf("%d", &A);
-    printf("Digite um valor inteiro para B: ");
+    printf("Digite outro valor inteiro: ");
     scanf("%d", &B);
+    int soma = SomadoDobro(&A, &B);
+    printf("O dobro de A: %d\n", A);
+    printf("O dobro de B: %d\n", B);
+    printf("A soma do dobro de A e B = %d\n", soma);
 
-    ptrA = &A;
-    ptrB = &B;
-    int SomaDobro(){
-        *ptrA = 2*A;
-        *ptrB = 2*B;
-        op = A+B;
-        return op;
-    }
-    printf("A soma do dobro de A + B e igual: %d", op);
     return 0;
 }
