@@ -11,13 +11,13 @@ int main(){
     printf("Digite um valor inteiro para A: ");
     scanf("%d", &A);
     printf("Digite um valor inteiro para B: ");
-    scanf("%d%d", &B);
+    scanf("%d", &B);
 
     ptrA = &A;
     ptrB = &B;
     int SomaDobro(){
         *ptrA = 2*A;
-        *ptrB = 2*A;
+        *ptrB = 2*B;
         op = A+B;
         return op;
     }
