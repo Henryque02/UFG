@@ -14,7 +14,7 @@ int main(){
     printf("Digite o numero de bytes que seu nome pode ter: ");
     scanf("%d", &n);
 
-    int *arr = (int *)malloc(n * sizeof(int));
+    char *arr = (char *)malloc(n * sizeof(int));
     if (arr == NULL)
     {
         printf("Erro ao alocar memoria!\n");
