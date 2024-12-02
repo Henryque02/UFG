@@ -1,1 +1,1 @@
-Projetos e exercícios da faculdade
+College Projects and exercises
